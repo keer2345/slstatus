@@ -69,5 +69,6 @@ static const struct arg args[] = {
 	{ cpu_perc, "[ %s%% ",	NULL},
 	{ ram_perc, " %s%%]", NULL},
 	{ run_command, "  %s ", "amixer sget Master | awk -F\"[][]\" '/%/ { print $2 }' | head -n1"},
+	{ run_command, " ﯧ %s ", "brightnessctl  | sed -n '2p' | cut -d '(' -f2 | cut -d ')' -f1"},
 	{ datetime, "%s",           "%F %R" },
 };
